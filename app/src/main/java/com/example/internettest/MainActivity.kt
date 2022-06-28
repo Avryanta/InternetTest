@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fetchHTTPInfo(url: String): String {
-        val connection = URL(url).openConnection() as HttpURLConnection
+        val connection: HttpURLConnection = URL(url).openConnection() as HttpURLConnection
         return connection.inputStream.bufferedReader().readText()
     }
 
