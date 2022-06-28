@@ -59,7 +59,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fetchOkHTTPInfo(url : String) : String {
-
             val client = OkHttpClient()
             val request = Request.Builder()
                 .url(url)
@@ -67,7 +66,6 @@ class MainActivity : AppCompatActivity() {
 
             val response = client.newCall(request).execute()
             return response.body?.string().toString()
-
     }
 
 }
